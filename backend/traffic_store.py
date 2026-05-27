@@ -138,7 +138,7 @@ def apply_preset(name: str, path: Path = TRAFFIC_FILE) -> dict[str, Any]:
     return payload
 
 
-def inject_cnn_snapshot(model_mode: str, path: Path = TRAFFIC_FILE) -> dict[str, Any]:
+def inject_pretrained_snapshot(model_mode: str, path: Path = TRAFFIC_FILE) -> dict[str, Any]:
     payload = read_traffic(path)
     pattern = ["clear", "gridlock", "heavy", "moderate", "gridlock", "clear"]
 
@@ -146,11 +146,12 @@ def inject_cnn_snapshot(model_mode: str, path: Path = TRAFFIC_FILE) -> dict[str,
         status = pattern[index % len(pattern)]
         entry["density"] = DENSITY_LABELS[status]
         entry["status"] = status
-        entry["source"] = model_mode
+        entry["source"] = "pretrained_detector"
+        entry["model_mode"] = model_mode
         entry["confidence"] = round(0.72 + (index % 4) * 0.06, 2)
 
-    payload["active_scenario"] = f"CNN snapshot ({model_mode})"
-    payload["updated_at"] = "cnn"
+    payload["active_scenario"] = f"Pretrained detector snapshot ({model_mode})"
+    payload["updated_at"] = "pretrained"
     write_traffic(payload, path)
     return payload
 

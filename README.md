@@ -23,12 +23,10 @@ LiveRoute is a local proof-of-concept for smart-city emergency routing in Dehrad
 route finder/
 ├── backend/
 │   ├── app.py
-│   ├── cnn_custom.py
 │   ├── cnn_pretrained.py
 │   ├── download_osm_graph.py
 │   ├── graph_engine.py
 │   ├── traffic_store.py
-│   └── train_custom_cnn.py
 ├── frontend/
 │   └── dashboard.py
 ├── simulator/
@@ -38,10 +36,8 @@ route finder/
 │   ├── dehradun_intersections.json
 │   ├── locations.json
 │   ├── sample_dehradun_graph.graphml
-│   ├── traffic_density.json
-│   └── traffic_images/
+│   └── traffic_density.json
 ├── models/
-│   ├── custom_cnn/
 │   └── pretrained/
 ├── requirements.txt
 ├── requirements-ml.txt
@@ -83,39 +79,12 @@ python simulator/traffic_simulator.py --once
 python simulator/traffic_simulator.py --skip-bootstrap
 ```
 
-## CNN Modes
+## Pretrained Detector
 
-The project structure supports two analysis modes:
+The project focuses on a pretrained YOLO-style detector for traffic analysis:
 
-- `Pretrained Detector`: intended for YOLO-style vehicle detection. If `models/pretrained/yolov8n.pt` is missing, the app uses a deterministic local fallback so the demo still runs.
-- `Custom CNN`: intended for a four-class traffic classifier. If `models/custom_cnn/traffic_cnn.pt` is missing, the app uses a deterministic local fallback.
-
-The custom CNN dataset should be arranged like this:
-
-```text
-data/traffic_images/
-├── train/
-│   ├── clear/
-│   ├── moderate/
-│   ├── heavy/
-│   └── gridlock/
-├── val/
-│   ├── clear/
-│   ├── moderate/
-│   ├── heavy/
-│   └── gridlock/
-└── test/
-    ├── clear/
-    ├── moderate/
-    ├── heavy/
-    └── gridlock/
-```
-
-Train the custom CNN after adding images:
-
-```powershell
-python backend/train_custom_cnn.py
-```
+- If `models/pretrained/yolov8n.pt` is missing, the app uses a deterministic local fallback so the demo still runs.
+- If Ultralytics is installed, [backend/cnn_pretrained.py](D:/live-traffic-routing-using-cnn/backend/cnn_pretrained.py) can estimate density from detected vehicle bounding boxes on a traffic image.
 
 Install ML dependencies only when needed:
 
@@ -137,7 +106,7 @@ Traffic is stored per directed edge:
   "density": 0.7,
   "status": "heavy",
   "coordinates": [30.3173, 78.0336],
-  "source": "custom_cnn"
+  "source": "pretrained_detector"
 }
 ```
 

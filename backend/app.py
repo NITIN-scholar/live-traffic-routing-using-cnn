@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 
 from backend.graph_engine import calculate_route, graph_stats, load_locations
-from backend.traffic_store import apply_preset, inject_cnn_snapshot, read_traffic
+from backend.traffic_store import apply_preset, inject_pretrained_snapshot, read_traffic
 
 
 app = FastAPI(title="LiveRoute Emergency Routing API")
@@ -34,9 +34,9 @@ def traffic_preset(name: str) -> dict:
     return apply_preset(name)
 
 
-@app.post("/traffic/cnn/{model_mode}")
-def traffic_cnn(model_mode: str) -> dict:
-    return inject_cnn_snapshot(model_mode)
+@app.post("/traffic/pretrained/{model_mode}")
+def traffic_pretrained(model_mode: str) -> dict:
+    return inject_pretrained_snapshot(model_mode)
 
 
 @app.get("/route")

@@ -1,4 +1,2 @@
-# Optional ML dependencies. Install when training/running CNN models.
-torch>=2.4
-torchvision>=0.19
+# Optional ML dependency for the pretrained detector path.
 ultralytics>=8.3
