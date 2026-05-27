@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 from pathlib import Path
 
 
@@ -7,6 +8,43 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATASET_DIR = PROJECT_ROOT / "data" / "traffic_images"
 MODEL_PATH = PROJECT_ROOT / "models" / "custom_cnn" / "traffic_cnn.pt"
 CLASS_NAMES = ["clear", "moderate", "heavy", "gridlock"]
+
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp", ".tif", ".tiff"}
+
+
+def count_images(folder: Path) -> int:
+    return sum(1 for path in folder.rglob("*") if path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS)
+
+
+def validate_split(split_name: str) -> dict[str, int]:
+    split_dir = DATASET_DIR / split_name
+    if not split_dir.exists():
+        raise FileNotFoundError(f"Missing dataset split folder: {split_dir}")
+
+    counts: dict[str, int] = {}
+    for class_name in CLASS_NAMES:
+        class_dir = split_dir / class_name
+        if not class_dir.exists():
+            raise FileNotFoundError(f"Missing class folder: {class_dir}")
+        counts[class_name] = count_images(class_dir)
+
+    if sum(counts.values()) == 0:
+        raise ValueError(
+            f"No images found in {split_dir}. Add labeled images under "
+            f"{split_dir / CLASS_NAMES[0]} and the other class folders first."
+        )
+
+    return counts
+
+
+def write_dataset_summary(path: Path, train_counts: dict[str, int], val_counts: dict[str, int]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(["split", "class_name", "image_count"])
+        for split_name, counts in {"train": train_counts, "val": val_counts}.items():
+            for class_name in CLASS_NAMES:
+                writer.writerow([split_name, class_name, counts[class_name]])
 
 
 def main() -> None:
@@ -31,6 +69,15 @@ def main() -> None:
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         ]
     )
+
+    train_counts = validate_split("train")
+    val_counts = validate_split("val")
+    write_dataset_summary(DATASET_DIR / "dataset_summary.csv", train_counts, val_counts)
+    print("Dataset summary:")
+    for class_name in CLASS_NAMES:
+        print(f"  train/{class_name}: {train_counts[class_name]}")
+    for class_name in CLASS_NAMES:
+        print(f"  val/{class_name}: {val_counts[class_name]}")
 
     train_data = datasets.ImageFolder(DATASET_DIR / "train", transform=transform)
     val_data = datasets.ImageFolder(DATASET_DIR / "val", transform=val_transform)

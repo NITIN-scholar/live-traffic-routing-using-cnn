@@ -34,7 +34,6 @@ route finder/
 ├── simulator/
 │   └── traffic_simulator.py
 ├── data/
-│   ├── camera_config.json
 │   ├── city_network.graphml
 │   ├── dehradun_intersections.json
 │   ├── locations.json
