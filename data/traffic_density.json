@@ -1,0 +1,162 @@
+{
+  "city": "Dehradun",
+  "active_scenario": "Realtime simulation",
+  "updated_at": "2026-05-27T01:56:10.596083+00:00",
+  "traffic_edges": [
+    {
+      "camera_id": "cam_001",
+      "intersection": "Prince Chowk",
+      "from_node": "3634070569",
+      "to_node": "3634070570",
+      "road_name": "Prince Chowk monitored corridor",
+      "density": 0.29,
+      "status": "moderate",
+      "coordinates": [
+        30.3173,
+        78.0336
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.72
+    },
+    {
+      "camera_id": "cam_001_reverse",
+      "intersection": "Prince Chowk",
+      "from_node": "3634070570",
+      "to_node": "3634070569",
+      "road_name": "Prince Chowk monitored corridor",
+      "density": 0.13,
+      "status": "clear",
+      "coordinates": [
+        30.3173,
+        78.0336
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.78
+    },
+    {
+      "camera_id": "cam_002",
+      "intersection": "Clock Tower",
+      "from_node": "5616480644",
+      "to_node": "9170870205",
+      "road_name": "Clock Tower monitored corridor",
+      "density": 0.39,
+      "status": "moderate",
+      "coordinates": [
+        30.3256,
+        78.0437
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.84
+    },
+    {
+      "camera_id": "cam_003",
+      "intersection": "Survey Chowk",
+      "from_node": "6699340540",
+      "to_node": "6699340534",
+      "road_name": "Survey Chowk monitored corridor",
+      "density": 0.38,
+      "status": "moderate",
+      "coordinates": [
+        30.3303,
+        78.0494
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.9
+    },
+    {
+      "camera_id": "cam_004",
+      "intersection": "Raipur Chowk",
+      "from_node": "6798173029",
+      "to_node": "6798173031",
+      "road_name": "Raipur Chowk monitored corridor",
+      "density": 0.17,
+      "status": "clear",
+      "coordinates": [
+        30.3348,
+        78.0685
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.72
+    },
+    {
+      "camera_id": "cam_004_reverse",
+      "intersection": "Raipur Chowk",
+      "from_node": "6798173031",
+      "to_node": "6798173029",
+      "road_name": "Raipur Chowk monitored corridor",
+      "density": 0.45,
+      "status": "moderate",
+      "coordinates": [
+        30.3348,
+        78.0685
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.78
+    },
+    {
+      "camera_id": "cam_005",
+      "intersection": "Ballupur Chowk",
+      "from_node": "6797974454",
+      "to_node": "10038942183",
+      "road_name": "Ballupur monitored corridor",
+      "density": 0.23,
+      "status": "clear",
+      "coordinates": [
+        30.3343,
+        78.0118
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.84
+    },
+    {
+      "camera_id": "cam_005_reverse",
+      "intersection": "Ballupur Chowk",
+      "from_node": "10038942183",
+      "to_node": "6797974454",
+      "road_name": "Ballupur monitored corridor",
+      "density": 0.14,
+      "status": "clear",
+      "coordinates": [
+        30.3343,
+        78.0118
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.9
+    },
+    {
+      "camera_id": "cam_006",
+      "intersection": "Patel Nagar",
+      "from_node": "2357203161",
+      "to_node": "4059650131",
+      "road_name": "Patel Nagar monitored corridor",
+      "density": 0.65,
+      "status": "heavy",
+      "coordinates": [
+        30.306,
+        78.0179
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.72
+    },
+    {
+      "camera_id": "cam_006_reverse",
+      "intersection": "Patel Nagar",
+      "from_node": "4059650131",
+      "to_node": "2357203161",
+      "road_name": "Patel Nagar monitored corridor",
+      "density": 0.32,
+      "status": "moderate",
+      "coordinates": [
+        30.306,
+        78.0179
+      ],
+      "source": "realtime_simulation",
+      "confidence": 0.78
+    }
+  ],
+  "simulation": {
+    "tick": 50,
+    "changed_edges": 4,
+    "change_probability": 0.35
+  }
+}

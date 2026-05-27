@@ -1,0 +1,146 @@
+[
+  {
+    "node": "survey_chowk",
+    "lat": 30.3303,
+    "lon": 78.0494,
+    "degree": 5
+  },
+  {
+    "node": "prince_chowk",
+    "lat": 30.3173,
+    "lon": 78.0336,
+    "degree": 4
+  },
+  {
+    "node": "clock_tower",
+    "lat": 30.3256,
+    "lon": 78.0437,
+    "degree": 4
+  },
+  {
+    "node": "dharampur",
+    "lat": 30.3048,
+    "lon": 78.0568,
+    "degree": 4
+  },
+  {
+    "node": "ballupur_chowk",
+    "lat": 30.3343,
+    "lon": 78.0118,
+    "degree": 4
+  },
+  {
+    "node": "patel_nagar",
+    "lat": 30.306,
+    "lon": 78.0179,
+    "degree": 3
+  },
+  {
+    "node": "railway_station",
+    "lat": 30.3165,
+    "lon": 78.0322,
+    "degree": 3
+  },
+  {
+    "node": "doon_hospital",
+    "lat": 30.3207,
+    "lon": 78.0448,
+    "degree": 3
+  },
+  {
+    "node": "dilaram_chowk",
+    "lat": 30.3453,
+    "lon": 78.0497,
+    "degree": 3
+  },
+  {
+    "node": "jakhan",
+    "lat": 30.3622,
+    "lon": 78.058,
+    "degree": 3
+  },
+  {
+    "node": "sahastradhara_crossing",
+    "lat": 30.354,
+    "lon": 78.0825,
+    "degree": 3
+  },
+  {
+    "node": "raipur_chowk",
+    "lat": 30.3348,
+    "lon": 78.0685,
+    "degree": 3
+  },
+  {
+    "node": "kanwali",
+    "lat": 30.3104,
+    "lon": 78.0074,
+    "degree": 3
+  },
+  {
+    "node": "gandhi_park",
+    "lat": 30.3277,
+    "lon": 78.0412,
+    "degree": 2
+  },
+  {
+    "node": "parade_ground",
+    "lat": 30.329,
+    "lon": 78.0454,
+    "degree": 2
+  },
+  {
+    "node": "karanpur",
+    "lat": 30.337,
+    "lon": 78.05,
+    "degree": 2
+  },
+  {
+    "node": "pacific_mall",
+    "lat": 30.366,
+    "lon": 78.0708,
+    "degree": 2
+  },
+  {
+    "node": "nehru_colony",
+    "lat": 30.3054,
+    "lon": 78.0702,
+    "degree": 2
+  },
+  {
+    "node": "jogiwala",
+    "lat": 30.3044,
+    "lon": 78.0899,
+    "degree": 2
+  },
+  {
+    "node": "rispana_bridge",
+    "lat": 30.3018,
+    "lon": 78.0782,
+    "degree": 2
+  },
+  {
+    "node": "max_hospital",
+    "lat": 30.3373,
+    "lon": 78.0115,
+    "degree": 2
+  },
+  {
+    "node": "isbt",
+    "lat": 30.2896,
+    "lon": 78.0017,
+    "degree": 1
+  },
+  {
+    "node": "prem_nagar",
+    "lat": 30.3393,
+    "lon": 77.9604,
+    "degree": 1
+  },
+  {
+    "node": "rajpur",
+    "lat": 30.385,
+    "lon": 78.0867,
+    "degree": 1
+  }
+]

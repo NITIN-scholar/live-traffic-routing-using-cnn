@@ -1,0 +1,4 @@
+# Optional ML dependencies. Install when training/running CNN models.
+torch>=2.4
+torchvision>=0.19
+ultralytics>=8.3

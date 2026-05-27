@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+dashboard-preview.png
+.streamlit/secrets.toml
+models/**/*.pt
+models/**/*.pth
+models/**/*.h5
+models/**/*.keras
+data/city_network.graphml
+data/osmnx_cache/

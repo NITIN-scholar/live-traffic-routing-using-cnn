@@ -1,0 +1,20 @@
+[
+  {
+    "camera_id": "cam_001",
+    "intersection": "Prince Chowk",
+    "from_node": "prince_chowk",
+    "to_node": "clock_tower",
+    "direction_model": "directed_osm_edge",
+    "roi_polygon": [[140, 410], [1060, 390], [1160, 690], [80, 700]],
+    "map_coordinates": [30.3173, 78.0336]
+  },
+  {
+    "camera_id": "cam_002",
+    "intersection": "Clock Tower",
+    "from_node": "clock_tower",
+    "to_node": "doon_hospital",
+    "direction_model": "directed_osm_edge",
+    "roi_polygon": [[120, 430], [1100, 400], [1180, 690], [70, 710]],
+    "map_coordinates": [30.3256, 78.0437]
+  }
+]

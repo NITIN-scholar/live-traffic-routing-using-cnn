@@ -1,0 +1,2 @@
+# Optional OSM graph download dependencies. The demo uses sample cached data by default.
+osmnx>=2.0

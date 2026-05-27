@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Clock Tower Dehradun",
+    "lat": 30.3256,
+    "lon": 78.0437
+  },
+  {
+    "name": "Doon Medical College Hospital",
+    "lat": 30.3207,
+    "lon": 78.0448
+  },
+  {
+    "name": "Max Super Speciality Hospital",
+    "lat": 30.3373,
+    "lon": 78.0115
+  },
+  {
+    "name": "ISBT Dehradun",
+    "lat": 30.2896,
+    "lon": 78.0017
+  },
+  {
+    "name": "Pacific Mall",
+    "lat": 30.366,
+    "lon": 78.0708
+  },
+  {
+    "name": "Survey Chowk",
+    "lat": 30.3303,
+    "lon": 78.0494
+  },
+  {
+    "name": "Raipur Chowk",
+    "lat": 30.3348,
+    "lon": 78.0685
+  },
+  {
+    "name": "Prince Chowk",
+    "lat": 30.3173,
+    "lon": 78.0336
+  },
+  {
+    "name": "Dehradun Railway Station",
+    "lat": 30.3165,
+    "lon": 78.0322
+  },
+  {
+    "name": "Gandhi Park",
+    "lat": 30.3277,
+    "lon": 78.0412
+  },
+  {
+    "name": "Dharampur",
+    "lat": 30.3048,
+    "lon": 78.0568
+  },
+  {
+    "name": "Jogiwala",
+    "lat": 30.3044,
+    "lon": 78.0899
+  },
+  {
+    "name": "Prem Nagar",
+    "lat": 30.3393,
+    "lon": 77.9604
+  },
+  {
+    "name": "Rajpur",
+    "lat": 30.385,
+    "lon": 78.0867
+  }
+]

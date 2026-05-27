@@ -1,0 +1,12 @@
+fastapi>=0.115
+folium>=0.17
+networkx>=3.3
+numpy>=2.0
+pandas>=2.2
+pillow>=10.4
+python-dotenv>=1.0
+streamlit>=1.39
+streamlit-autorefresh>=1.0
+streamlit-folium>=0.22
+streamlit-js-eval>=0.1.7
+uvicorn>=0.30
